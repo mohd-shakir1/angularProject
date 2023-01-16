@@ -9,6 +9,7 @@ import { LoginModule } from './login/login.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProductsComponent } from './products/products.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { SharedModule } from './shared/shared.module';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
     BrowserModule,
     AppRoutingModule,
     LoginModule,
+    SharedModule,
     BrowserAnimationsModule,
     MatCardModule,
     MatButtonModule
