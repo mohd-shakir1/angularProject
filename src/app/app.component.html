@@ -1,1 +1,15 @@
-<app-login></app-login>
+<!-- <app-login></app-login> -->
+<!-- <div *ngFor="let product of products">
+    {{product.id}}
+    {{product.title}}
+    {{product.description}}
+</div> -->
+<div *ngIf="!productdetail; else productDetail">
+<app-products (productDetail)="assignData($event)"></app-products>
+</div>
+<div>
+    <ng-template #productDetail>
+        <app-product-detail (removeValue)="assignData($event)" [productDetail]="productdetail"></app-product-detail>
+    </ng-template>
+
+</div>

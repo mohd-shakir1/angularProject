@@ -1,0 +1,36 @@
+<div class="container" *ngIf="productDetail">
+    <div class="row">
+        <div class="col-12">
+            <h3>Product Detail</h3>
+        </div>
+        <div class="col-md-4">
+            <div class="card mb-3">
+                <img src="{{productDetail.thumbnail}}" alt=".." class="w-100"  />                
+            </div>
+            <ul class="list-group list-group-horizontal">
+                <li class="list-group-item" *ngFor="let images of productDetail.images">
+                <a>
+                    <img  src="{{images}}" alt=".." class="w-100"  /> 
+                </a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-8">
+            <div>
+                <h1>{{productDetail.title}}</h1>
+                <p>{{productDetail.description}}</p>
+                <div>
+                    <span>{{productDetail.brand}}</span>&nbsp;
+                    <span>{{productDetail.category}}</span>
+                </div>
+            <h2 class="text-danger">₹{{productDetail.price}}</h2>
+            <h3>Discount - {{productDetail.discountPercentage}}</h3>
+            <h4>Rating - {{productDetail.rating}}</h4>
+            <span class="h4">Stock - {{productDetail.stock}}</span>
+            </div>
+           
+            
+        </div>
+    </div>
+    <button type="button" class="btn btn-danger mt-3" (click)="back()">Back on Product Page</button>
+</div>

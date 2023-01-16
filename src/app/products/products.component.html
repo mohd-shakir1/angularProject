@@ -1,0 +1,26 @@
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2>Product Listing Page</h2>
+            </div>
+            <div class="col-md-3" *ngFor="let product of products.users">
+                <div class="card mb-3">
+                    <img src="{{product.thumbnail}}" alt=".." class="card-img-top" height="200px" />
+                    <div class="card-body">
+                        <h4 class="h3">{{product.title}}</h4>
+                        <p>{{product.description}}</p> 
+                        <div class="d-flex justify-content-between mb-2 align-items-center">
+                            <span class="h6">{{product.brand}} {{product.category}}</span>
+                                <span class="text-danger h6">₹{{product.price}}</span>
+                        </div>                   
+                       
+                        
+                        <button type="button" class="btn btn-info" (click)="passData(product)">Buy Now</button>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</section>

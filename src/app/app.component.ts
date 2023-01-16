@@ -7,4 +7,34 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-training';
+  products = [
+    {
+      id:1,
+      title: 'product title',
+      description: 'product description'
+    },
+    {
+      id:1,
+      title: 'product title',
+      description: 'product description'
+    },
+    {
+      id:1,
+      title: 'product title',
+      description: 'product description'
+    },
+    {
+      id:1,
+      title: 'product title',
+      description: 'product description'
+    }
+  ]
+  productdetail :any =null;
+  constructor(){
+
+  }
+  assignData(event:any){
+    console.log(event,"events")
+    this.productdetail = event;
+  }
 }
